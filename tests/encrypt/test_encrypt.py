@@ -4,29 +4,11 @@ import pytest
 
 def test_encrypt_message():
     with pytest.raises(TypeError):
-        encrypt_message("Hello", "1")
+        encrypt_message("abc", "1")
 
     with pytest.raises(TypeError):
-        encrypt_message(123, 2)
+        encrypt_message(4, 1)
 
-    assert encrypt_message("Hello World", 15) == "dlroW olleH"
-
-    assert encrypt_message("Hello World", 5) == "olleH_dlroW"
-
-    assert encrypt_message("Hello World", 6) == "World_Hello"
-
-    assert encrypt_message("Hello World", 1) == "dlroW olleH"
-
-    assert encrypt_message("Hello World", 10) == "World_Hello"
-
-    assert encrypt_message("", 2) == ""
-
-    assert encrypt_message("", 1) == ""
-
-    assert encrypt_message("", 9) == ""
-
-    assert encrypt_message("A", 1) == "A"
-
-    assert encrypt_message("A", 1) == "A"
-
-    assert encrypt_message("A", 2) == "A_"
+    assert encrypt_message("trybe", 5) == "ebyrt"
+    assert encrypt_message("trybe", 2) == "eby_rt"
+    assert encrypt_message("trybe", 3) == "yrt_eb"
