@@ -11,8 +11,6 @@ valid_message = "flamengo"
 valid_even_key = 4
 valid_odd_key = 5
 
-correct_even_output = ""
-
 
 def test_encrypt_message():
     # testar se os valores de param sao validos senao gerar value error
